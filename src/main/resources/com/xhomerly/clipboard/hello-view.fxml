@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xhomerly.clipboard.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label fx:id="labelis" />
+      <TextField fx:id="fromText" text="2" />
+      <TextField fx:id="toText" text="4" />
+      <TextField fx:id="stepText" text="0.1" />
+      <HBox alignment="CENTER" prefHeight="9.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#calc" text="calculate" />
+            <Button mnemonicParsing="false" onAction="#copy" text="Copy" />
+         </children>
+      </HBox>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0">
+         <font>
+            <Font name="Courier New" size="12.0" />
+         </font></TextArea>
+   </children>
+
+</VBox>
