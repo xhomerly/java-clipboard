@@ -28,7 +28,8 @@ public class HelloController {
         double step = Double.parseDouble(stepText.getText());
 
         for (double i = from; i <= to+step; i+=step) {
-            String text = "Číslo " + Math.round(i* 10.0) / 10.0 + ":\t" + Math.round(Math.pow(2, i)* 100.0) / 100.0 + "\t" + Math.round(Math.pow(3, i)* 1000.0) / 1000.0 + "\n";
+            String text = "Číslo " + Math.round(i* 10.0) / 10.0 + ":\t" + Math.round(Math.pow(i, 2)* 100.0) / 100.0 + "\t" + Math.round(Math.pow(i, 3)* 1000.0) / 1000.0 + "\n";
+            text = text.replaceAll("\\.", ",");
             textArea.appendText(text);
         }
     }
